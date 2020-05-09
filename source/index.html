@@ -1,12 +1,133 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Пинк</title>
-  </head>
-  <body>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Мобильное приложение для раскрашивания серых будней в розовый цвет">
+  <meta name="keywords" content="приложение, фото, настроение">
+  <title>HTML Academy: Pink</title>
+</head>
 
-  </body>
+<body>
+<header class="page-header">
+  <a class="logo page-header__logo">
+    <img class="logo__image page-header__logo-image" src="https://via.placeholder.com/150x150" alt="Приложение Pink" width="" height="">
+  </a>
+  <nav class="main-nav">
+    <button class="main-nav__toogle" type="button">Открыть меню</button>
+    <ul class="main-nav__list site-list">
+      <li class="site-list__item site-list__item--active"><a>Главная</a></li>
+      <li class="site-list__item"><a href="photo.html">Фотографии</a></li>
+      <li class="site-list__item"><a href="form.html">Конкурс</a></li>
+      <li class="site-list__item"><a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
+    </ul>
+  </nav>
+  <h1 class="page-header__heading">Взгляните на жизнь иначе!</h1>
+  <img class="page-header__image-phone" src="https://via.placeholder.com/150x150" alt="Демонстрация экрана, с запущенным приложением" width="" height="">
+  <section class="download">
+    <h2 class="visually-hidden">Загрузи прлижение к себе на устройство.</h2>
+    <a class="download__button" href="https://apps.apple.com/ru/genre/ios/id36" target="_blank">Скачать приложение</a>
+    <ul class="download__list">
+      <li class="download__item">
+        <a class="download__market download__market--apple " href="https://apps.apple.com/ru/genre/ios/id36" target="_blank">App store</a>
+      </li>
+      <li class="download__item">
+        <a class="download__market download__market--google" href="https://play.google.com/store?hl=ru" target="_blank">Google play</a>
+      </li>
+      <li class="download__item">
+        <a class="download__market download__market--microsoft" href="https://www.microsoft.com/ru-ru/store/apps/windows" target="_blank">Microsoft store</a>
+      </li>
+    </ul>
+    <p class="download__note">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+  </section>
+</header>
+
+<main class="page-main">
+  <section class="advantages">
+    <h2 class="advantages__title">Устали от серости мегаполиса?Нам есть, что вам предложить!</h2>
+    <ul class="advantages__list">
+      <li class="advantages__item advantages__item--mood">
+        <img class="advantages__item-image advantages__item-image--mood" src="https://via.placeholder.com/150x150" alt="" width="" height="">
+        <h3 class="advantages__heading">Поднимает настроение</h3>
+        <p class="advantages__paragraph">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+      </li>
+      <li class="advantages__item advantages__item--world">
+        <img class="advantages__item-image advantages__item-image--world" src="https://via.placeholder.com/150x150" alt="" width="" height="">
+        <h3 class="advantages__heading">Меняет мир вокруг</h3>
+        <p class="advantages__paragraph">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+      </li>
+      <li class="advantages__item advantages__item--friends">
+        <img class="advantages__item-image advantages__item-image--friends" src="https://via.placeholder.com/150x150" alt="" width="" height="">
+        <h3 class="advantages__heading">Заводит новых друзей</h3>
+        <p class="advantages__paragraph">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+      </li>
+    </ul>
+  </section>
+  <section class="reviews slider">
+    <h2 class="visually-hidden">Отзывы</h2>
+    <div class="reviews__item slider__item">
+      <cite class="reviews__author">Николай Петров</cite>
+      <blockquote class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в
+        комментариях к выложенной фотографии!»</blockquote>
+    </div>
+    <div class="reviews__item slider__item">
+      <cite class="reviews__author">Николай Петров</cite>
+      <blockquote class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в
+        комментариях к выложенной фотографии!»</blockquote>
+    </div>
+    <div class="reviews__item slider__item">
+      <cite class="reviews__author">Николай Петров</cite>
+      <blockquote class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в
+        комментариях к выложенной фотографии!»</blockquote>
+    </div>
+    <p class="reviews__toggles slider__toggles">
+      <button class="reviews__toggle slider__toggle">1</button>
+      <button class="reviews__toggle slider__toggle">2</button>
+      <button class="reviews__toggle slider__toggle">3</button>
+    </p>
+  </section>
+  <section class="price slider">
+    <h2 class="visually-hidden">Различия и стоимость приложения</h2>
+    <div class="price__item slider__item">
+      <img class="price__image" src="https://via.placeholder.com/150x150" alt="Стандарт" width="" height="">
+    </div>
+    <div class="price__item slider__item">
+      <img class="price__image" src="https://via.placeholder.com/150x150" alt="Стандарт" width="" height="">
+    </div>
+    <div class="price__item slider__item">
+      <img class="price__image" src="https://via.placeholder.com/150x150" alt="Стандарт" width="" height="">
+    </div>
+    <p class="price__toggles slider__toggles">
+      <button class="price__toggle slider__toggle">1</button>
+      <button class="price__toggle slider__toggle">2</button>
+      <button class="price__toggle slider__toggle">3</button>
+    </p>
+  </section>
+  <section class="contacts">
+    <h2 class="contacts__title">Остались вопросы? Свяжитесь с нами!</h2>
+    <ul class="contacts__item">
+      <li class="contacts__list">
+        <b class="contacts__text">Звоните:</b>
+        <a class="contacts__link" href="tel:+78125556666">+7 (812) 555-66-66</a>
+      </li>
+      <li class="contacts__list">
+        <b class="contacts__text">Пишите:</b>
+        <a class="contacts__link" href="malito:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+      </li>
+      <li class="contacts__list">
+        <b class="contacts__text">Приезжайте в гости:</b>
+        <a class="contacts__link" href="https://goo.gl/maps/t5Ye2STGB9asRpm86">ул. Большая
+          Конюшенная, 19/8
+        </a>
+      </li>
+    </ul>
+  </section>
+</main>
+<footer class="page-footer">
+  <iframe class="page-footer__map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002815!2d30.320858715692516!3d59.93871916905466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1585379612548!5m2!1sru!2sru"
+          width="320" height="645" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+</footer>
+</body>
+
 </html>
