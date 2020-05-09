@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Мобильное приложение для раскрашивания серых будней в розовый цвет">
+  <meta name="keywords" content="приложение, фото, настроение">
+  <title>HTML Academy: Pink конкурс</title>
+</head>
+
+<body>
+<header class="page-header page-header--photo">
+  <a class="logo page-header__logo">
+    <img class="logo-image page-header__logo-image" src="https://via.placeholder.com/150x150" alt="Приложение Pink" width="" height="">
+  </a>
+  <nav class="main-nav">
+    <button class="main-nav__toogle" type="button">Открыть меню</button>
+    <ul class="main-nav__list site-list">
+      <li class="site-list__item"><a href="index.html">Главная</a></li>
+      <li class="site-list__item"><a href="photo.html">Фотографии</a></li>
+      <li class="site-list__item site-list__item--active"><a>Конкурс</a></li>
+      <li class="site-list__item"><a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
+    </ul>
+  </nav>
+  <h1 class="page-header__heading">Конкурс на самое безбашенное путешествие с Пинк</h1>
+</header>
+<main>
+  <section class="contest">
+    <h2 class="visually-hidden">Форма участия в конкурсе</h2>
+    <p class="contest__paragraph">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
+    <form class="contest__form" action="https://echo.htmlacademy.ru" method="get">
+      <fieldset class="contest__form-item form-about">
+        <legend class="visually-hidden"> Введите ФИО</legend>
+        <div class="form-about__wrapper">
+          <label class="form-about__title" for="surname-field">Фамилия:</label>
+          <input class="form-about__text" type="text" name="surname" id="surname-field" placeholder="Укажите фамилию *" pattern="^[А-Яа-яЁё\s]+$" required>
+        </div>
+        <div class="form-about__wrapper">
+          <label class="form-about__title" for="name-field">Имя: </label>
+          <input class="form-about__text" type="text" name="name" id="name-field" placeholder="Введите ваше имя *" pattern="^[А-Яа-яЁё\s]+$" required>
+        </div>
+        <div class="form-about__wrapper">
+          <label class="form-about__title" for="patronymic-field">Отчество:</label>
+          <input class="form-about__text" type="text" name="patronymic" id="patronymic-field" placeholder="Ну и отчество тоже">
+        </div>
+      </fieldset>
+      <fieldset class="contest__form-item checkbox">
+        <legend class="contest__form-legend">Ваши безбашенные достижения в путешествии</legend>
+        <div class="checkbox__wrapper">
+          <input class="checkbox__option" type="checkbox" name="shark" id="shark-field" checked>
+          <label class="checkbox__title" for="shark-field">Сделал селфи с акулой</label>
+        </div>
+        <div class="checkbox__wrapper">
+          <input class="checkbox__option" type="checkbox" name="beach" id="beach-field" checked>
+          <label class="checkbox__title" for="beach-field">Обгорел на пляже </label>
+        </div>
+        <div class="checkbox__wrapper">
+          <input class="checkbox__option" type="checkbox" name="norris" id="norris-field">
+          <label class="checkbox__title" for="norris-field">Видел Чака Норриса</label>
+        </div>
+        <div class="checkbox__wrapper">
+          <input class="checkbox__option" type="checkbox" name="gift" id="gift-field">
+          <label class="checkbox__title" for="gift-field">Накупил сувениров</label>
+        </div>
+        <div class="checkbox__wrapper">
+          <input class="checkbox__option" type="checkbox" name="tower" id="tower-field" checked>
+          <label class="checkbox__title" for="tower-field">Удержал башню</label>
+        </div>
+        <div class="checkbox__wrapper">
+          <input class="checkbox__option" type="checkbox" name="hotel" id="hotel-field">
+          <label class="checkbox__title" for="hotel-field">Разгромил отель</label>
+        </div>
+      </fieldset>
+      <fieldset class="contest__form-item form-about">
+        <legend class="visually-hidden"> Введите телефон и email</legend>
+        <div class="form-about__wrapper">
+          <label class="form-about__title" for="tel-field">Номер телефона</label>
+          <input class="form-about__text" type="tel" name="tel" id="tel-field" placeholder="Номер, пожалуйста">
+        </div>
+        <div class="form-about__wrapper">
+          <label class="form-about__title" for="email-field">Адрес почты</label>
+          <input class="form-about__text" type="email" name="email" id="email-field" placeholder="Введите почту *" required>
+        </div>
+      </fieldset>
+      <fieldset class="contest__form-item radio">
+        <legend class="contest__form-legend">С каким приложением путешествовали?</legend>
+        <div class="radio__wrapper">
+          <input class="radio__option" type="radio" name="os" id="apple-field" value="ios" checked>
+          <label class="radio__title" for="apple-field">Pink для iOS</label>
+        </div>
+        <div class="radio__wrapper">
+          <input class="radio__option" type="radio" name="os" id="android-field" value="android">
+          <label class="radio__title" for="android-field">Pink на Android</label>
+        </div>
+        <div class="radio__wrapper">
+          <input class="radio__option" type="radio" name="os" id="windows-field" value="windows">
+          <label class="radio__title" for="windows-field">Windows Phone</label>
+        </div>
+      </fieldset>
+      <fieldset class="contest__form-item textarea">
+        <legend class="contest__form-legend">Опишите свои эмоции</legend>
+        <div class="textarea__wrapper">
+          <label class="visually-hidden" for="text-area">Текст письма:</label>
+          <textarea class="textarea__text" name="text" id="text-area" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+        </div>
+      </fieldset>
+      <button class="btn contest__form-btn" type="submit">Отправить форму</button>
+      <div class="contest__form-footnote">
+        <span class="contest__form-star">*</span>
+        <b class="contest__form-note"> — обязательные поля</b>
+      </div>
+    </form>
+  </section>
+</main>
+<footer class="page-footer">
+  <a class="logo page-footer__logo" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+    <img class="logo__image page-footer__logo" src="https://via.placeholder.com/150x150" alt="Логотип Pink">
+  </a>
+  <ul class="page-footer__social social">
+    <li class="social__item">
+      <a class="social__link social__link--twitter" href="https://twitter.com/" target="_blank">Twitter</a>
+    </li>
+    <li class="social__item">
+      <a class="social__link social__link--facebook" href="https://facebook.com/" target="_blank">Facebook</a>
+    </li>
+    <li class="social__item">
+      <a class="social__link social__link--youtube" href="https://youtube.com/" target="_blank">Youtube</a>
+    </li>
+  </ul>
+    <span class="page-footer__copyright">
+      <b class="page-footer__copyright-text">Разработано</b>
+      <a class="page-footer__copyright-academy" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+        <!-- SVG?--><img src="" alt="HTML Academy" width="" height="">
+      </a>
+    </span>
+</footer>
+<!-- pop-up ошибка-->
+<section class="modal modal--error">
+  <h2 class="visually-hidden">Проверьте правильность заполнения данных.</h2>
+  <div class="modal__wrapper">
+    <h3 class="modal__title">Что-то пошло не так!</h3>
+    <p class="modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+    <button class="btn modal__btn">Ok</button>
+  </div>
+</section>
+<!--pop-up данные отправлены-->
+<section class="modal modal--success">
+  <h2 class="visually-hidden">Данные отправлены.</h2>
+  <div class="modal__wrapper">
+    <h3 class="modal__title">Ваша заявка отправлена</h3>
+    <p class="modal__text">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
+    <div class="modal__btn-wrapper">
+      <button class="btn modal__btn">Закрыть окно</button>
+    </div>
+  </div>
+</section>
+</body>
+
+</html>
