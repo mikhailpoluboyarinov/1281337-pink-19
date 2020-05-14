@@ -6,145 +6,210 @@
   <meta name="description" content="Мобильное приложение для раскрашивания серых будней в розовый цвет">
   <meta name="keywords" content="приложение, фото, настроение">
   <title>HTML Academy: Pink фотографии</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-<header class="page-header page-header--photo">
-  <a class="logo page-header__logo">
-    <img class="logo__image page-header__logo-image" src="https://via.placeholder.com/150x150" alt="Приложение Pink" width="" height="">
-  </a>
+<header class="page-header">
+  <div class="page-header__wrapper">
+    <a class="logo page-header__logo" href="index.html">
+      <img class="logo__image page-header__logo-image" src="./img/logo-pink-white-mobile.svg" alt="Приложение Pink" width="75" height="22">
+    </a>
+    <button class="page-header__toggle" type="button">
+      <span class="visually-hidden">Открыть меню</span>
+      <span class="page-header__burger"></span>
+    </button>
+  </div>
   <nav class="main-nav">
-    <button class="main-nav__toogle" type="button">Открыть меню</button>
-    <ul class="main-nav__list site-list">
-      <li class="site-list__item"><a href="index.html">Главная</a></li>
-      <li class="site-list__item site-list__item--active"><a>Фотографии</a></li>
-      <li class="site-list__item"><a href="form.html">Конкурс</a></li>
-      <li class="site-list__item"><a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
+    <ul class="main-nav__list">
+      <li class="main-nav__item"><a class="main-nav__item-link" href="index.html">Главная</a></li>
+      <li class="main-nav__item main-nav__item--active"><a class="main-nav__active-link">Фотографии</a></li>
+      <li class="main-nav__item"><a class="main-nav__item-link" href="form.html">Конкурс</a></li>
+      <li class="main-nav__item"><a class="main-nav__item-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
     </ul>
   </nav>
-  <h1 class="page-header__heading">Фотографии пользователей</h1>
 </header>
 <main class="page-main">
+  <h1 class="page-main__heading">Фотографии пользователей</h1>
   <section class="photo">
     <h2 class="visually-hidden">Новые фото на сайте</h2>
-    <p class="photo__paragraph">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+    <p class="photo__paragraph">Взгляните на фотографии, которые выкладывают пользователи! Видите,&nbspкак не хватает ваших?</p>
     <ul class="photo__list">
       <li class="photo__item photo__item--panorama">
-        <span class="photo__best-panorama">Панорама дня</span>
-        <a class="photo__link" href="#">
-          <img class="photo__link-image" src="https://via.placeholder.com/150x150" alt="Панорама" width="" height="">
-        </a>
-        <h3 class="photo__author">Анна (5 минут назад)</h3>
-        <p class="photo__comment">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
-        <button class="photo__like" type="button">Нравится</button>
-        <b class="photo__like-number">Нравится: 215</b>
+        <div class="photo__label-panorama"><span class="photo__best-text">Панорама дня</span></div>
+        <div class="photo__panorama">
+          <a class="photo__link" href="#">
+            <img class="photo__link-image" src="./img/panorama-mobile@1x.jpg" alt="Панорама" width="320" height="137">
+          </a>
+        </div>
+        <div class="photo__item-wrapper">
+          <h3 class="photo__author">Анна <span class="photo__time">(5 минут назад)</span></h3>
+          <p class="photo__comment">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои
+          </p>
+          <div class="photo__wrapper">
+            <button class="photo__like" type="button"><span class="visually-hidden">Нравится</span></button>
+            <b class="photo__like-number">Нравится: 215</b>
+          </div>
+        </div>
       </li>
       <li class="photo__item">
-        <a class="photo__link" href="#">
-          <img class="photo__link-image" src="https://via.placeholder.com/150x150" alt="Фото белой машины" width="" height="">
+        <div class="photo__item-wrapper"><a class="photo__link" href="#">
+          <img class="photo__link-image" src="./img/photo-car-mobile@1x.jpg" alt="Фото белой машины" width="280" height="180">
         </a>
-        <h3 class="photo__author">Левон (5 часов назад)</h3>
-        <p class="photo__comment">Вчера он на луну летал, сегодня в руки к нам попал.</p>
-        <button class="photo__like" type="button">Нравится</button>
-        <b class="photo__like-number">Нравится: 356</b>
+          <h3 class="photo__author">Левон <span class="photo__time">(5 часов назад)</span></h3>
+          <p class="photo__comment">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+          <div class="photo__wrapper">
+            <button class="photo__like" type="button"><span class="visually-hidden">Нравится</span></button>
+            <b class="photo__like-number">Нравится: 356</b>
+          </div>
+        </div>
       </li>
       <li class="photo__item">
-        <a class="photo__link" href="#">
-          <img class="photo__link-image" src="https://via.placeholder.com/150x150" alt="фото барабанной установки" width="" height="">
+        <div class="photo__item-wrapper"> <a class="photo__link" href="#">
+          <img class="photo__link-image" src="./img/photo-drumset-mobile@1x.jpg" alt="фото барабанной установки" width="280" height="180">
         </a>
-        <h3 class="photo__author">Антон (12 часов назад)</h3>
-        <p class="photo__comment">Соседи будут рады!</p>
-        <button class="photo__like" type="button">Нравится</button>
-        <b class="photo__like-number">Нравится: 666</b>
+          <h3 class="photo__author">Антон <span class="photo__time">(12 часов назад)</span></h3>
+          <p class="photo__comment">Соседи будут рады!</p>
+          <div class="photo__wrapper">
+            <button class="photo__like" type="button"><span class="visually-hidden">Нравится</span></button>
+            <b class="photo__like-number">Нравится: 666</b>
+          </div>
+        </div>
+      </li>
+
+      <li class="photo__item">
+        <div class="photo__item-wrapper">
+          <a class="photo__link" href="#">
+            <img class="photo__link-image" src="./img/photo-window-mobile@1x.jpg" alt="Фото неба сквозь стеклянную крышу" width="280" height="180">
+          </a>
+          <h3 class="photo__author">Борис <span class="photo__time">(20 часов назад)</span></h3>
+          <p class="photo__comment">Здесь могла быть ваша цитата о высоком и вечном.</p>
+          <div class="photo__wrapper">
+            <button class="photo__like" type="button"><span class="visually-hidden">Нравится</span></button>
+            <b class="photo__like-number">Нравится: 215</b>
+          </div>
+        </div>
+      </li>
+
+      <li class="photo__item">
+        <div class="photo__item-wrapper">
+          <a class="photo__link" href="#">
+            <img class="photo__link-image" src="./img/photo-fair-mobile@1x.jpg" alt="Фото развала с арбузами и дынями" width="280" height="180">
+          </a>
+          <h3 class="photo__author">Сергей <span class="photo__time">(25 часов назад)</span></h3>
+          <p class="photo__comment">Самая кубанская в мире!</p>
+          <div class="photo__wrapper">
+            <button class="photo__like" type="button"><span class="visually-hidden">Нравится</span></button>
+            <b class="photo__like-number">Нравится: 4</b>
+          </div>
+        </div>
       </li>
       <li class="photo__item">
-        <a class="photo__link" href="#">
-          <img class="photo__link-image" src="https://via.placeholder.com/150x150" alt="Фото неба через стеклянную крышу" width="" height="">
-        </a>
-        <h3 class="photo__author">Борис (20 часов назад)</h3>
-        <p class="photo__comment">Здесь могла быть ваша цитата о высоком и вечном.</p>
-        <button class="photo__like" type="button">Нравится</button>
-        <b class="photo__like-number">Нравится: 215</b>
+        <div class="photo__item-wrapper">
+          <a class="photo__link" href="#">
+            <img class="photo__link-image" src="./img/photo-pov-mobile@1x.jpg" alt="Фото человека на холме" width="280" height="180">
+          </a>
+          <h3 class="photo__author">Максим <span class="photo__time">(40 часов назад)</span></h3>
+          <p class="photo__comment">Где снег-то?</p>
+          <div class="photo__wrapper">
+            <button class="photo__like" type="button"><span class="visually-hidden">Нравится</span></button>
+            <b class="photo__like-number">Нравится: 150</b>
+          </div>
+        </div>
       </li>
       <li class="photo__item">
-        <a class="photo__link" href="#">
-          <img class="photo__link-image" src="https://via.placeholder.com/150x150" alt="Фото развала с арбузами и дынями" width="" height="">
-        </a>
-        <h3 class="photo__author">Сергей (25 часов назад)</h3>
-        <p class="photo__comment">Самая кубанская в мире!</p>
-        <button class="photo__like" type="button">Нравится</button>
-        <b class="photo__like-number">Нравится: 4</b>
-      </li>
-      <li class="photo__item">
-        <a class="photo__link" href="#">
-          <img class="photo__link-image" src="https://via.placeholder.com/150x150" alt="Фото человека на холме" width="" height="">
-        </a>
-        <h3 class="photo__author">Максим (40 часов назад)</h3>
-        <p class="photo__comment">Где снег-то?</p>
-        <button class="photo__like" type="button">Нравится</button>
-        <b class="photo__like-number">Нравится: 150</b>
-      </li>
-      <li class="photo__item">
-        <a class="photo__link" href="#">
-          <img class="photo__link" src="https://via.placeholder.com/150x150" alt="Фото крыла самолета в небе" width="" height="">
-        </a>
-        <h3 class="photo__author">Надежда (45 часов назад)</h3>
-        <p class="photo__comment">Всем GM и взаимные лайки!</p>
-        <button class="photo__like" type="button">Нравится</button>
-        <b class="photo__like-number">Нравится: 2560</b>
+        <div class="photo__item-wrapper">
+          <a class="photo__link" href="#">
+            <img class="photo__link" src="./img/photo-wing-mobile@1x.jpg" alt="Фото крыла самолета в небе" width="280" height="180">
+          </a>
+          <h3 class="photo__author">Надежда <span class="photo__time">(45 часов назад)</span></h3>
+          <p class="photo__comment">Всем GM и взаимные лайки!</p>
+          <div class="photo__wrapper">
+            <button class="photo__like" type="button"><span class="visually-hidden">Нравится</span></button>
+            <b class="photo__like-number">Нравится: 2560</b>
+          </div>
+        </div>
       </li>
     </ul>
   </section>
   <section class="upgrade">
     <h2 class="visually-hidden">Обработка изображений</h2>
-    <p class="upgade__paragpaph">Затмите их всех!
-      Выкладывайте все, что накопилось в телефоне!</p>
+    <p class="upgrade__paragpaph">Затмите их всех!
+      Выкладывайте&nbspвсе,&nbspчто накопилось в телефоне!</p>
     <form class="upgrade__form" action="https://echo.htmlacademy.ru" method="get">
-      <img class="upgrade__image" src="https://via.placeholder.com/150x150" alt="Результат обработки фото" width="" height="">
-      <p class="upgrade__item-custom">
+      <img class="upgrade__image" src="./img/photo-road-mobile@1x.jpg" alt="Результат обработки фото" width="280" height="374">
+      <div class="upgrade__item-custom">
         <button class="upgrade__btn-custom upgrade__btn-custom--size" type="button">
-          <img src="" alt="Изменить размер" width="" height="">
+          <span class="visually-hidden">Обрезать фото</span>
         </button>
         <button class="upgrade__btn-custom upgrade__btn-custom--fill" type="button">
-          <img src="" alt="Изменить заливку" width="" height="">
+          <span class="visually-hidden">Изменить заливку</span>
         </button>
         <button class="upgrade__btn-custom upgrade__btn-custom--contrast" type="button">
-          <img src="" alt="Изменить контраст" width="" height="">
+          <span class="visually-hidden">Изменить контраст</span>
         </button>
-      </p>
+      </div>
       <div class="upgrade__range-wrapper">
         <div class="upgrade__range">
           <button class="upgrade__range-btn" type="button"></button>
         </div>
       </div>
-      <div class="upgrade__btn">
-        <button class="upgrade__btn upgrade__btn--send" type="submit">Запостить</button>
-        <button class="upgrade__btn upgrade__btn--reset" type="reset">Отмена</button>
+      <div class="upgrade__btn-wrapper">
+        <button class="upgrade__btn " type="submit">Запостить</button>
+        <button class="upgrade__btn upgrade__btn--cancel" type="reset">Отмена</button>
       </div>
     </form>
   </section>
 </main>
 <footer class="page-footer">
-  <a class="logo page-footer__logo" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
-    <img class="logo__image page-footer__logo" src="https://via.placeholder.com/150x150" alt="Логотип Pink">
-  </a>
-  <ul class="page-footer__social social">
-    <li class="social__item">
-      <a class="social__link social__link--twitter" href="https://twitter.com/" target="_blank">Twitter</a>
-    </li>
-    <li class="social__item">
-      <a class="social__link social__link--facebook" href="https://facebook.com/" target="_blank">Facebook</a>
-    </li>
-    <li class="social__item">
-      <a class="social__link social__link--youtube" href="https://youtube.com/" target="_blank">Youtube</a>
-    </li>
-  </ul>
-    <span class="page-footer__copyright">
+  <div class="page-footer__social-wrapper">
+    <a class="logo page-footer__logo" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+      <img class="logo__image page-footer__logo" src="./img/logo-pink-blue-mobile.svg" alt="Логотип Pink" width="147" height="40">
+    </a>
+    <ul class="page-footer__social">
+      <li class="page-footer__item">
+        <a class="page-footer__link page-footer--twitter" href="https://twitter.com/" target="_blank"><span class="visually-hidden">Twitter</span>
+          <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.5px" height="14.663px"
+              viewBox="0 0 17.5 14.663" enable-background="new 0 0 17.5 14.663" xml:space="preserve">
+              <g id="W6EeEF_1_">
+                <g>
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M11.283,0.153c1.736-0.485,3.074,0.263,3.685,1.151 c0.694-0.226,1.372-0.47,2.072-0.691c-0.004,0.841-0.538,1.478-0.883,1.727C16.861,2.506,17.5,1.86,17.5,1.86 c-0.175,0.976-1.035,1.746-1.611,1.977C15.65,10.429,12.617,14.793,5.507,14.66c-0.538,0,0.077,0-0.46,0 c-0.422,0-4.29-0.45-5.047-1.843c2.341,0.192,4.011-0.412,4.835-1.15c-0.989-0.293-2.761-0.464-3.07-2.881 c0.362,0.105,0.583,0.223,1.228,0.117C1.757,8.067,0.385,7.366,0.461,5.218c0.294,0.32,1.1,0.523,1.381,0.461 c-0.725-0.235-2.03-3.281-0.921-4.836C2.794,2.654,4.769,4.364,8.29,4.528C8.506,2.288,9.461,0.787,11.283,0.153z" />
+                </g>
+              </g>
+            </svg>
+        </a>
+      </li>
+      <li class="page-footer__item">
+        <a class="page-footer__link page-footer--facebook" href="https://facebook.com/" target="_blank"><span class="visually-hidden">Facebook</span>
+          <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="8.673px" height="18.944px"
+              viewBox="0 0 8.673 18.944" enable-background="new 0 0 8.673 18.944" xml:space="preserve">
+              <path
+                d="M6.275,3.357c0.799,0,1.599,0,2.398,0c0-1.119,0-2.238,0-3.357c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.115 H0v3.517h1.958c0,3.104,0,6.208,0,9.312c1.279,0,2.558,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.115H5.786 C5.765,5.07,5.75,3.709,6.275,3.357z" />
+            </svg>
+        </a>
+      </li>
+      <li class="page-footer__item">
+        <a class="page-footer__link page-footer--youtube" href="https://youtube.com/" target="_blank"><span class="visually-hidden">Youtube</span>
+          <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="14.64px" height="13.96px"
+              viewBox="0 0 14.64 13.96" enable-background="new 0 0 14.64 13.96" xml:space="preserve">
+              <path d="M1.775,13.78C0.799,14.257,0,13.758,0,12.671V1.29c0-1.088,0.799-1.585,1.775-1.109l12.133,5.932 c0.975,0.478,0.975,1.258,0,1.736L1.775,13.78z" />
+            </svg>
+        </a>
+      </li>
+    </ul>
+    <div class="page-footer__copyright">
       <b class="page-footer__copyright-text">Разработано</b>
       <a class="page-footer__copyright-academy" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
-        <img src="" alt="HTML Academy" width="" height="">
+        <span class="visually-hidden">HTML Academy</span>
+        <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px"
+            viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
+            <path
+              d="M13.62,0.017L13.472,0L0,1.412v24.661l13.472,8.017l13.43-7.99l0.042-0.026V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 l-0.001-0.104L13.407,5.28l-0.088-0.056v0.109L1.925,12.118V3.147l11.547-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.013,1.415l5.904,3.513l-0.86,0.507l-5.031-2.992l-0.013,1.415l3.827,2.275l-0.782,0.523l-3.032-1.787 l-0.013,1.413l1.852,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.015,1.044l-7.941-4.728L5.395,19.65 l7.979,4.796l0.017,1.076l-7.972-4.741l-0.013,1.415l8.021,4.821l0.045,0.026l8.143-4.872v-1.268l-0.011-0.148v-3.761l3.415-2.036 v10.02L13.472,31.85L1.925,24.979V15.127z" />
+          </svg>
       </a>
-    </span>
+    </div>
+  </div>
 </footer>
 </body>
 

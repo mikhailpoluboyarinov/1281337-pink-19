@@ -1,0 +1,45 @@
+.modal {
+  width: 320px;
+  text-align: center;
+  background-color: @white;
+  box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
+}
+
+.modal__title {
+  padding: 45px 0 25px;
+  font-size: 18px;
+}
+
+.modal__text {
+  padding: 0 25px;
+  line-height: 24px;
+}
+
+.modal__btn {
+  width: 276px;
+  margin: 50px 22px 44px;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+  background-color: @green;
+  color: @white;
+  border: solid 2px @green;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: @green-hover;
+    border: 2px solid @green-hover;
+  }
+
+  &:active {
+    color: @white-active;
+  }
+}
+
+.modal__btn-wrapper {
+  margin-top: 37px;
+  background-color: @dark-opac;
+}

@@ -1,0 +1,89 @@
+.page-header {
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+  color: @white;
+  background-color: @dark-bgc;
+}
+
+.page-header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0 24px;
+}
+
+.page-header__logo {
+  width: 75px;
+  height: 22px;
+  margin-left: 20px;
+}
+
+.page-header__toggle {
+  width: 50px;
+  height: 24px;
+  margin-right: 20px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.page-header__toggle:hover {
+  .page-header__burger {
+    background-color: @pink;
+  }
+
+  .page-header__burger::before {
+    background-color: @pink;
+  }
+
+  .page-header__burger::after {
+    background-color: @pink;
+  }
+}
+
+.page-header__toggle:active {
+  .page-header__burger {
+    background-color: @pink-opac;
+  }
+
+  .page-header__burger::before {
+    background-color: @pink-opac;
+  }
+
+  .page-header__burger::after {
+    background-color: @pink-opac;
+  }
+}
+
+.page-header__burger {
+  position: relative;
+  /* временно*/
+  display: block;
+  width: 50px;
+  height: 4px;
+  background-color: @white;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    transform: translateY(-8px);
+    width: 50px;
+    height: 4px;
+    background-color: @white;
+    /*временно*/
+    margin-left: -25px;
+  }
+
+  &::after {
+    content: " ";
+    position: absolute;
+    transform: translateY(8px);
+    width: 50px;
+    height: 4px;
+    background-color: @white;
+    /*временно*/
+    margin-left: -25px;
+  }
+}
