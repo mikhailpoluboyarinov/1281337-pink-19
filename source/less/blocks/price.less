@@ -1,0 +1,129 @@
+.price {
+  position: relative;
+  width: 320px;
+  padding: 115px 0 98px;
+  overflow: hidden;
+  background-color: @grey;
+  background-image: url("./../img/bg-triangle-white.svg");
+  background-repeat: no-repeat;
+  background-position: center -9px;
+}
+
+.price__table {
+  margin: 0 auto;
+  width: 828px;
+  table-layout: fixed;
+  transform: translateX(-255px);
+  background-color: @white;
+  border-collapse: collapse;
+}
+
+.price__title {
+  text-align: center;
+  background-color: @dark;
+  color: @white;
+}
+
+.price__title-blog {
+  width: 276px;
+  padding: 18px 70px;
+  border: 2px solid @grey;
+  text-align: center;
+
+  &--hit {
+    position: absolute;
+    width: 74px;
+    height: 73px;
+    background-image: url("./../img/bg-hit.svg");
+    background-repeat: no-repeat;
+    transform: translate(-73px, -18px);
+  }
+
+  &--text {
+    line-height: 21px;
+    text-transform: uppercase;
+    transform: rotate(-45deg) translate(-15px, 3px);
+    display: inline-block;
+  }
+}
+
+.price__title-name {
+  display: block;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.price__title-cost {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 30px;
+}
+
+.price__options {
+  border: 2px solid @grey;
+}
+
+.price__options-access {
+  padding: 14px 0 15px 20px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: @dark;
+  border: 2px solid @grey;
+
+  &--cut {
+    display: none;
+  }
+
+  &--available {
+    background-image: url("./../img/icon-yes.svg");
+    background-repeat: no-repeat;
+    background-position: 230px center;
+    background-size: 31px;
+  }
+
+  &--not-available {
+    background-image: url("./../img/icon-no.svg");
+    background-repeat: no-repeat;
+    background-position: 230px center;
+  }
+}
+
+.price__toggles {
+  position: absolute;
+  top: 434px;
+  left: 50%;
+  margin-left: -40px;
+}
+
+.price__toggle {
+  width: 6px;
+  height: 6px;
+  margin-left: 15px;
+  padding: 0;
+  vertical-align: middle;
+  transform: translateX(-5px);
+  background-color: @dark;
+  opacity: 0.3;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &--active {
+    background-color: @white;
+    opacity: 1;
+    border: 3px solid @dark;
+    width: 12px;
+    height: 12px;
+  }
+
+  &:hover {
+    background-color: @dark;
+    opacity: 0.6;
+  }
+
+  &:active {
+    background-color: @dark-opac;
+  }
+}

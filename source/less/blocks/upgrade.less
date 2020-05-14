@@ -1,0 +1,130 @@
+.upgrade {
+  text-align: center;
+}
+
+.upgade__paragpaph {
+  margin: 0;
+  padding: 19px 30px 42px;
+  line-height: 30px;
+}
+
+.upgrade__form {
+  background-color: @grey;
+}
+
+.upgrade__image {
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.upgrade__item-custom {
+  display: flex;
+  justify-content: space-between;
+  width: 210px;
+  margin: 0 auto;
+  padding-top: 42px;
+}
+
+.upgrade__btn-custom {
+  width: 48px;
+  height: 46px;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &--size {
+    background-image: url("./../img/icon-editor-crop.svg");
+  }
+
+  &--fill {
+    background-image: url("./../img/icon-editor-fill.svg");
+  }
+
+  &--contrast {
+    background-image: url("./../img/icon-editor-contrast.svg");
+    background-position: 50% 50%;
+  }
+}
+
+.upgrade__range-wrapper {
+  position: relative;
+  width: 280px;
+  min-height: 75px;
+  margin: 0 auto;
+}
+
+.upgrade__range {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  width: 240px;
+  height: 2px;
+  background-color: @dark;
+}
+
+.upgrade__range-btn {
+  position: absolute;
+  top: -6px;
+  right: 35px;
+  width: 15px;
+  height: 15px;
+  padding: 0;
+  background-color: @grey;
+  border: 2px solid @pink;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:active {
+    background-color: @pink;
+  }
+}
+
+.upgrade__btn-wrapper {
+  padding: 36px 0 30px;
+  border-top: 1px solid @dark-opac;
+}
+
+.upgrade__btn {
+  width: 280px;
+  margin-bottom: 13px;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: center;
+  color: @pink;
+  background-color: transparent;
+  border: 3px solid @pink;
+  border-radius: 40px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: @pink;
+    color: @white;
+  }
+
+  &:active {
+    background-color: @pink;
+    color: @white-active;
+  }
+
+  &--cancel {
+    color: @dark-opac;
+    border: 3px solid @dark-opac;
+  }
+
+  &--cancel:hover {
+    background-color: transparent;
+    opacity: 0.3;
+    color: @dark;
+    border: 3px solid @dark;
+  }
+
+  &--cancel:active {
+    background-color: @dark;
+    opacity: 0.3;
+    color: @white-active;
+    border: 3px solid @dark;
+  }
+}

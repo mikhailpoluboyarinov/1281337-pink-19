@@ -1,0 +1,94 @@
+.download {
+  position: relative;
+  z-index: 1;
+  width: 320px;
+  margin-top: 238px;
+  text-align: center;
+  background-color: @dark;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -314px;
+    left: -31px;
+    z-index: 0;
+    display: block;
+    width: 100%;
+    height: 314px;
+    background-image: url("./../img/iphone-hand-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+  }
+}
+
+.download__button {
+  display: inline-block;
+  vertical-align: middle;
+  width: 280px;
+  padding: 15px 0;
+  margin: 27px 0 30px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: center;
+  background-color: transparent;
+  color: @white;
+  border: 3px solid @white;
+  border-radius: 40px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: @white;
+    color: @pink;
+  }
+
+  &:active {
+    background-color: @white;
+    color: @pink-opac;
+  }
+}
+
+.download__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 204px;
+  margin: auto;
+  padding: 0;
+  list-style: none;
+}
+
+.download__market {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background-repeat: no-repeat;
+
+  &--apple {
+    width: 47px;
+    height: 56px;
+    background-image: url("./../img/logo-apple.svg");
+  }
+
+  &--google {
+    width: 43px;
+    height: 47px;
+    background-image: url("./../img/logo-android.svg");
+  }
+
+  &--microsoft {
+    width: 44px;
+    height: 41px;
+    background-image: url("./../img/logo-microsoft.svg");
+  }
+}
+
+.download__note {
+  width: 280px;
+  margin: 0 auto;
+  padding: 22px 0 30px;
+  font-weight: 300;
+  line-height: 24px;
+  text-align: center;
+  color: @white;
+}
