@@ -3,10 +3,15 @@
   background-color: @white;
 }
 
+.photo_container {
+  width: 320px;
+  margin: 0 auto;
+}
+
 .photo__paragraph {
   width: 280px;
   margin: 0 auto;
-  padding: 45px 10px;
+  padding: 45px 10px 48px;
   font-weight: 400;
   line-height: 30px;
 }
@@ -14,7 +19,6 @@
 .photo__list {
   margin: 0;
   padding: 0;
-  padding-top: 4px;
   text-align: left;
   list-style: none;
 }
@@ -22,12 +26,13 @@
 .photo__item {
   width: 100%;
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-top: 20px;
   background-color: @white;
 
   &--panorama {
     position: relative;
     width: 100%;
+    margin: 0;
     padding: 0;
   }
 }
@@ -58,7 +63,7 @@
 
 .photo__author {
   margin: 0;
-  padding-top: 20px;
+  padding-top: 18px;
   padding-left: 17px;
   font-size: 14px;
   font-weight: 700;
@@ -82,7 +87,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 135px;
+  width: 137px;
   padding: 0 0 26px 18px;
 }
 
@@ -101,4 +106,87 @@
   font-weight: 300;
   text-transform: uppercase;
   color: @pink;
+}
+
+@media (min-width: 660px) {
+  .photo_container {
+    width: 660px;
+  }
+
+  .photo__paragraph {
+    width: 440px;
+    padding: 100px 0 80px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .photo__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .photo__item {
+    width: 300px;
+    display: flex;
+
+    &--panorama {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  .photo__item-wrapper {
+    width: 300px;
+
+    &--panorama {
+      width: 620px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  .photo__wrapper--panorama {
+    order: -1;
+  }
+}
+
+@media (min-width: 1200px) {
+  .photo_container {
+    width: 1200px;
+  }
+
+  .photo__paragraph {
+    width: 580px;
+    padding-top: 0;
+  }
+
+  .photo__list {
+    width: 940px;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+
+  .photo__item {
+    margin-bottom: 54px;
+  }
+
+  .photo__wrapper {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 280px;
+
+    &--panorama {
+      flex-direction: row;
+      width: 135px;
+    }
+  }
+
+
+  .photo__item-wrapper--panorama {
+    width: 100%;
+  }
+
+  .photo__panorama {
+    width: 100%;
+  }
 }

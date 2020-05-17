@@ -1,31 +1,22 @@
 .download {
+  background-color: @dark;
+}
+
+.download__container {
   position: relative;
   z-index: 1;
-  width: 320px;
-  margin-top: 238px;
+  width: 280px;
+  margin: 0 auto;
+  margin-top: 318px;
   text-align: center;
   background-color: @dark;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: -314px;
-    left: -31px;
-    z-index: 0;
-    display: block;
-    width: 100%;
-    height: 314px;
-    background-image: url("./../img/iphone-hand-mobile@1x.png");
-    background-repeat: no-repeat;
-    background-position: bottom center;
-  }
 }
 
 .download__button {
   display: inline-block;
   vertical-align: middle;
   width: 280px;
-  padding: 15px 0;
+  padding: 16px 0;
   margin: 27px 0 30px;
   font-size: 18px;
   font-weight: 700;
@@ -84,11 +75,51 @@
 }
 
 .download__note {
-  width: 280px;
+  width: 250px;
   margin: 0 auto;
   padding: 22px 0 30px;
   font-weight: 300;
   line-height: 24px;
   text-align: center;
   color: @white;
+}
+
+@media (min-width: 660px) {
+  .download {
+    background-color: transparent;
+  }
+
+  .download__container {
+    width: 300px;
+    margin: 0;
+    margin-left: 10px;
+    padding: 10px 0 79px;
+    text-align: center;
+    background-color: transparent;
+  }
+
+  .download__note {
+    width: 295px;
+    font-size: 18px;
+  }
+
+  .download__list {
+    margin: 12px auto 15px;
+  }
+
+  .download__button {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .download__container {
+    min-height: 520px;
+    width: 300px;
+    margin: 0 auto 0 125px;
+  }
+
+  .download__button {
+    font-size: 21px;
+  }
 }
