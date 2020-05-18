@@ -1,11 +1,24 @@
 .upgrade {
+  background-color: @grey;
+}
+
+.upgrade__container {
+  width: 320px;
+  margin: 0 auto;
   text-align: center;
 }
 
-.upgade__paragpaph {
+.upgrade__paragpaph {
   margin: 0;
-  padding: 19px 30px 42px;
+  padding: 36px 30px 42px;
   line-height: 30px;
+  background-color: @white;
+  text-align: center;
+
+  &--block {
+    display: block;
+    font-weight: 400;
+  }
 }
 
 .upgrade__form {
@@ -17,7 +30,7 @@
   padding-top: 20px;
 }
 
-.upgrade__item-custom {
+.upgrade__btn-custom-wrapper {
   display: flex;
   justify-content: space-between;
   width: 210px;
@@ -28,30 +41,36 @@
 .upgrade__btn-custom {
   width: 48px;
   height: 46px;
+  padding: 0;
   background-repeat: no-repeat;
   background-color: transparent;
   border: none;
   cursor: pointer;
+}
 
-  &--size {
-    background-image: url("./../img/icon-editor-crop.svg");
+.upgrade__svg {
+  opacity: 0.3;
+  fill: @dark;
+
+  &:hover {
+    opacity: 0.5;
   }
 
-  &--fill {
-    background-image: url("./../img/icon-editor-fill.svg");
-  }
-
-  &--contrast {
-    background-image: url("./../img/icon-editor-contrast.svg");
-    background-position: 50% 50%;
+  &:active {
+    fill: @pink;
+    opacity: 1;
   }
 }
 
-.upgrade__range-wrapper {
+.upgrade__range-block {
   position: relative;
   width: 280px;
   min-height: 75px;
   margin: 0 auto;
+
+  &--cut {
+    display: none;
+  }
 }
 
 .upgrade__range {
@@ -78,9 +97,17 @@
   &:active {
     background-color: @pink;
   }
+
+  &--fill {
+    left: 20px;
+  }
+
+  &--contrast {
+    right: 80px;
+  }
 }
 
-.upgrade__btn-wrapper {
+.upgrade__btn-form-wrapper {
   padding: 36px 0 30px;
   border-top: 1px solid @dark-opac;
 }
@@ -126,5 +153,154 @@
     opacity: 0.3;
     color: @white-active;
     border: 3px solid @dark;
+  }
+}
+
+@media (min-width: 660px) {
+  .upgrade__container {
+    width: 620px;
+    padding: 57px 0 54px;
+  }
+
+  .upgrade__paragpaph {
+    margin: 0 auto;
+    padding: 73px 0 69px;
+    font-size: 18px;
+    text-align: center;
+    background-color: @white;
+  }
+
+  .upgrade__form {
+    display: flex;
+  }
+
+  .upgrade__instruments {
+    width: 260px;
+    margin: 0 auto;
+  }
+
+  .upgrade__image {
+    width: 300px;
+    height: 400px;
+    padding-top: 0;
+    margin: 0;
+  }
+
+  .upgrade__custom-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 260px;
+  }
+
+  .upgrade__range-wrapper {
+    width: 202px;
+  }
+
+  .upgrade__btn-custom-wrapper {
+    flex-direction: column;
+    align-items: center;
+    width: 50px;
+    height: 175px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .upgrade__btn-custom {
+    width: 22px;
+    height: 22px;
+    background-size: cover;
+  }
+
+  .upgrade__svg {
+    width: 22px;
+    height: 22px;
+
+    &--fill {
+      width: 24px;
+    }
+
+    &--contrast {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  .upgrade__range-block {
+    position: relative;
+    width: 202px;
+    min-height: 75px;
+    margin: 0 auto;
+
+    &--cut {
+      display: block;
+    }
+  }
+
+  .upgrade__range-block::before {
+    content: "";
+    position: absolute;
+    top: 73px;
+    left: -45px;
+    width: 275px;
+    height: 2px;
+    background-color: @dark-opac;
+  }
+
+  .upgrade__range {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 202px;
+  }
+
+  .upgrade__btn-form-wrapper {
+    border: none;
+  }
+
+  .upgrade__btn {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .upgrade__container {
+    width: 940px;
+  }
+
+  .upgrade__btn-custom-wrapper {
+    width: 44px;
+  }
+
+  .upgrade__btn-custom {
+    width: 44px;
+    height: 44px;
+    background-size: cover;
+  }
+
+  .upgrade__svg {
+    width: 44px;
+    height: 44px;
+
+    &--fill {
+      width: 48px;
+      height: 43px;
+    }
+
+    &--contrast {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  .upgrade__btn-form-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 410px;
+  }
+
+  .upgrade__btn {
+    width: 183px;
   }
 }

@@ -23,4 +23,69 @@
 
 .contacts__link {
   color: @pink;
+
+  &:hover {
+    color: @dark;
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: @dark-opac;
+  }
+}
+
+@media (min-width: 660px) {
+  .contacts__title {
+    font-size: 40px;
+    padding: 0 46px;
+  }
+
+  .contacts__item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 9px;
+    text-align: center;
+  }
+
+  .contacts__list {
+    padding: 22px 38px 25px;
+  }
+
+  .contacts__text {
+    padding-bottom: 10px;
+  }
+
+  .contacts__link {
+    display: inline-block;
+    width: 245px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contacts__title {
+    width: 560px;
+    padding-bottom: 70px;
+    font-size: 50px;
+  }
+
+  .contacts__item {
+    width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .contacts__list {
+    width: 240px;
+    padding: 0;
+  }
+
+  .contacts__list:nth-child(2) {
+    order: 1;
+  }
+
+  .contacts__text {
+    padding-bottom: 34px;
+  }
 }
