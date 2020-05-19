@@ -61,41 +61,51 @@
         <div class="contest__form-checkbox-container">
           <fieldset class="contest__form-item contest__form-item--checkbox">
             <legend class="contest__form-legend contest__form-legend--checkbox">Ваши безбашенные достижения в путешествии</legend>
-            <div class="contest__checkbox-wrapper">
-              <input class="contest__checkbox-option" type="checkbox" name="shark" id="shark-field" checked>
-              <label class="contest__checkbox-title" for="shark-field">Сделал селфи с акулой</label>
-            </div>
-            <div class="contest__checkbox-wrapper">
-              <input class="contest__checkbox-option" type="checkbox" name="beach" id="beach-field" checked>
-              <label class="contest__checkbox-title" for="beach-field">Обгорел на пляже </label>
-            </div>
-            <div class="contest__checkbox-wrapper">
-              <input class="contest__checkbox-option" type="checkbox" name="norris" id="norris-field">
-              <label class="contest__checkbox-title" for="norris-field">Видел Чака Норриса</label>
-            </div>
-            <div class="contest__checkbox-wrapper">
-              <input class="contest__checkbox-option" type="checkbox" name="gift" id="gift-field">
-              <label class="contest__checkbox-title" for="gift-field">Накупил сувениров</label>
-            </div>
-            <div class="contest__checkbox-wrapper">
-              <input class="contest__checkbox-option" type="checkbox" name="tower" id="tower-field" checked>
-              <label class="contest__checkbox-title" for="tower-field">Удержал башню</label>
-            </div>
-            <div class="contest__checkbox-wrapper">
-              <input class="contest__checkbox-option" type="checkbox" name="hotel" id="hotel-field">
-              <label class="contest__checkbox-title" for="hotel-field">Разгромил отель</label>
+            <div class="contest__checkbox-flex-wrapper">
+              <div>
+                <div class="contest__checkbox-wrapper">
+                  <input class="contest__checkbox-option" type="checkbox" name="shark" id="shark-field" checked>
+                  <label class="contest__checkbox-title" for="shark-field">Сделал селфи с акулой</label>
+                </div>
+                <div class="contest__checkbox-wrapper">
+                  <input class="contest__checkbox-option" type="checkbox" name="beach" id="beach-field" checked>
+                  <label class="contest__checkbox-title" for="beach-field">Обгорел на пляже </label>
+                </div>
+              </div>
+              <div>
+                <div class="contest__checkbox-wrapper">
+                  <input class="contest__checkbox-option" type="checkbox" name="norris" id="norris-field">
+                  <label class="contest__checkbox-title" for="norris-field">Видел Чака Норриса</label>
+                </div>
+                <div class="contest__checkbox-wrapper">
+                  <input class="contest__checkbox-option" type="checkbox" name="gift" id="gift-field">
+                  <label class="contest__checkbox-title" for="gift-field">Накупил сувениров</label>
+                </div>
+              </div>
+              <div>
+                <div class="contest__checkbox-wrapper">
+                  <input class="contest__checkbox-option" type="checkbox" name="tower" id="tower-field" checked>
+                  <label class="contest__checkbox-title" for="tower-field">Удержал башню</label>
+                </div>
+                <div class="contest__checkbox-wrapper">
+                  <input class="contest__checkbox-option" type="checkbox" name="hotel" id="hotel-field">
+                  <label class="contest__checkbox-title" for="hotel-field">Разгромил отель</label>
+                </div>
+              </div>
             </div>
           </fieldset>
         </div>
         <fieldset class="contest__form-item contest__form-item--phone">
           <legend class="contest__form-legend contest__form-legend--show">Контактная информация</legend>
-          <div class="contest__about-wrapper contest__about-wrapper--contacts contest__about-wrapper--contacts contest__about-wrapper--phone">
-            <label class="contest__about-title" for="tel-field">Номер телефона</label>
-            <input class="contest__about-text" type="tel" name="tel" id="tel-field" placeholder="Номер, пожалуйста">
-          </div>
-          <div class="contest__about-wrapper contest__about-wrapper--contacts contest__about-wrapper--email">
-            <label class="contest__about-title" for="email-field">Адрес почты</label>
-            <input class="contest__about-text" type="email" name="email" id="email-field" placeholder="Введите почту *" required>
+          <div class="contest__fieldset-phone-wrapper">
+            <div class="contest__about-wrapper contest__about-wrapper--contacts contest__about-wrapper--contacts contest__about-wrapper--phone">
+              <label class="contest__about-title contest__about-title--phone" for="tel-field">Номер телефона</label>
+              <input class="contest__about-text contest__about-text--phone" type="tel" name="tel" id="tel-field" placeholder="Номер, пожалуйста">
+            </div>
+            <div class="contest__about-wrapper contest__about-wrapper--contacts contest__about-wrapper--email">
+              <label class="contest__about-title contest__about-title--email" for="email-field">Адрес почты</label>
+              <input class="contest__about-text contest__about-text--phone" type="email" name="email" id="email-field" placeholder="Введите почту *" required>
+            </div>
           </div>
         </fieldset>
         <div class="contest__form-radio-container">
@@ -127,7 +137,7 @@
         <button class="btn contest__form-btn" type="submit">Отправить форму</button>
         <div class="contest__form-footnote">
           <span class="contest__form-star">*</span>
-          <b class="contest__form-note"> — обязательные поля</b>
+          <b class="contest__form-note">— обязательные <span class="contest__form-note-desk">для заполнения </span>поля</b>
         </div>
       </div>
     </form>
