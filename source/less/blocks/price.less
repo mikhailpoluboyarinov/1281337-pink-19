@@ -9,7 +9,7 @@
   position: relative;
   width: 320px;
   margin: 0 auto;
-  padding: 115px 0 98px;
+  padding: 115px 0 100px;
   overflow: hidden;
 }
 
@@ -37,23 +37,25 @@
   &--column1 {
     background-color: transparent;
   }
-
-  &--hit {
-    position: absolute;
-    width: 74px;
-    height: 73px;
-    background-image: url("./../img/bg-hit.svg");
-    background-repeat: no-repeat;
-    transform: translate(-73px, -18px);
-  }
-
-  &--text {
-    line-height: 21px;
-    text-transform: uppercase;
-    transform: rotate(-45deg) translate(-22px, 1px);
-    display: inline-block;
-  }
 }
+
+.price__title-label {
+  position: absolute;
+  width: 74px;
+  height: 73px;
+  background-image: url("./../img/bg-hit.svg");
+  background-repeat: no-repeat;
+  transform: translate(-73px, -18px);
+}
+
+.price__title-text {
+  display: inline-block;
+  line-height: 21px;
+  font-weight: 300;
+  text-transform: uppercase;
+  transform: rotate(-45deg) translate(-22px, 1px);
+}
+
 
 .price__title-name {
   display: block;
@@ -70,7 +72,7 @@
 }
 
 .price__options {
-  border: 2px solid @grey;
+  border: 2px solid @border-color;
 }
 
 .price__options-access {
@@ -78,7 +80,7 @@
   text-transform: uppercase;
   color: @dark;
   background-color: white;
-  border: 2px solid @grey;
+  border: 2px solid @border-color;
 
   &--cut {
     visibility: hidden;
@@ -90,14 +92,16 @@
   justify-content: space-between;
   width: 100%;
   margin: 0;
-  padding: 12px 17px;
+  padding: 15px 17px 11px;
 }
 
 .price__image-no {
+  display: block;
   fill: @icon-no;
 }
 
 .price__image-yes {
+  display: block;
   fill: @icon-yes;
 }
 
@@ -129,13 +133,15 @@
     height: 12px;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: @dark;
     opacity: 0.6;
+    transition: @animation;
   }
 
   &:active {
-    background-color: @dark-opac;
+    background-color: @dark-transparent;
   }
 }
 
@@ -146,12 +152,12 @@
 
   .price__container {
     width: 660px;
-    padding: 90px 0 67px;
+    padding: 84px 0 67px;
   }
 
   .price__options-wrapper {
     justify-content: center;
-    padding: 5px;
+    padding: 8px;
   }
 
   .price__options-access {
@@ -161,7 +167,7 @@
     &--cut {
       visibility: visible;
       padding-left: 15px;
-      text-transform: capitalize;
+      text-transform: inherit;
       border: none;
     }
 
@@ -194,20 +200,19 @@
     &--column1 {
       background-color: @grey;
     }
-
-    &--text {
-      transform: rotate(-45deg) translate(-14px, -2px);
-    }
-
-    &--hit {
-      width: 61px;
-      height: 61px;
-      background-image: url("./../img/bg-hit-tablet.svg");
-      background-repeat: no-repeat;
-      transform: translate(-30px, -11px);
-    }
   }
 
+  .price__title-label {
+    width: 61px;
+    height: 61px;
+    background-image: url("./../img/bg-hit-tablet.svg");
+    background-repeat: no-repeat;
+    transform: translate(-30px, -11px);
+  }
+
+  .price__title-text {
+    transform: rotate(-45deg) translate(-14px, -2px);
+  }
 
   .price__title-name {
     font-size: 16px;
@@ -223,8 +228,15 @@
 }
 
 @media (min-width: 960px) {
+  .price {
+    padding-top: 40px;
+    background-position: top;
+    background-size: contain;
+  }
+
   .price__container {
     width: 960px;
+    padding: 121px 0 96px;
   }
 
   .price__table {
@@ -232,19 +244,19 @@
   }
 
   .price__title-blog {
-    padding: 19px 30px 23px;
+    padding: 16px 30px 20px;
+  }
 
-    &--hit {
-      width: 74px;
-      height: 73px;
-      background-image: url("./../img/bg-hit.svg");
-      background-repeat: no-repeat;
-      transform: translate(-30px, -16px);
-    }
+  .price__title-label {
+    width: 74px;
+    height: 73px;
+    background-image: url("./../img/bg-hit.svg");
+    background-repeat: no-repeat;
+    transform: translate(-30px, -16px);
+  }
 
-    &--text {
-      transform: rotate(-45deg) translate(-20px, 2px);
-    }
+  .price__title-text {
+    transform: rotate(-45deg) translate(-20px, 2px);
   }
 
   .price__title-name {
@@ -256,7 +268,7 @@
   }
 
   .price__options-wrapper {
-    padding: 12px;
+    padding: 15px;
   }
 
   .price__options-access--cut {

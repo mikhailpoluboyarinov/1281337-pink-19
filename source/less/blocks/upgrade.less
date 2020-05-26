@@ -8,17 +8,19 @@
   text-align: center;
 }
 
-.upgrade__paragpaph {
-  margin: 0;
-  padding: 36px 110px 42px;
+.upgrade__paragraph {
+  margin: 0 auto;
+  padding: 43px 0 42px;
   line-height: 30px;
   background-color: @white;
   text-align: center;
+}
 
-  &--block {
-    display: block;
-    font-weight: 400;
-  }
+.upgrade__paragraph-block {
+  display: block;
+  width: 255px;
+  margin: 0 auto;
+  font-weight: 400;
 }
 
 .upgrade__form {
@@ -26,12 +28,14 @@
 }
 
 .upgrade__image {
+  width: 280px;
   margin: 0 auto;
   padding-top: 20px;
 }
 
 .upgrade__btn-custom-wrapper {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 210px;
   margin: 0 auto;
@@ -49,17 +53,30 @@
 }
 
 .upgrade__svg {
-  opacity: 0.3;
   fill: @dark;
+  opacity: 0.3;
+}
 
-  &:hover {
-    opacity: 0.5;
-  }
+.upgrade__btn-custom:hover .upgrade__svg,
+.upgrade__btn-custom:focus .upgrade__svg {
+  opacity: 0.5;
+  transition: @animation;
+}
 
-  &:active {
-    fill: @pink;
-    opacity: 1;
-  }
+.upgrade__btn-custom:active .upgrade__svg {
+  fill: @pink;
+  opacity: 1;
+}
+
+.upgrade__svg--current {
+  fill: @pink;
+  opacity: 1;
+}
+
+.upgrade__btn-custom:hover .upgrade__svg--current,
+.upgrade__btn-custom:focus .upgrade__svg--current {
+  fill: @pink;
+  opacity: 1;
 }
 
 .upgrade__range-block {
@@ -108,14 +125,14 @@
 }
 
 .upgrade__btn-form-wrapper {
-  padding: 36px 0 30px;
-  border-top: 1px solid @dark-opac;
+  padding: 36px 0 29px;
+  border-top: 1px solid @dark-transparent;
 }
 
 .upgrade__btn {
   width: 280px;
   margin-bottom: 13px;
-  padding: 15px 0;
+  padding: 15px 1px;
   font-size: 18px;
   font-weight: 700;
   line-height: 18px;
@@ -126,9 +143,11 @@
   border-radius: 40px;
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: @pink;
     color: @white;
+    transition: @animation;
   }
 
   &:active {
@@ -137,15 +156,17 @@
   }
 
   &--cancel {
-    color: @dark-opac;
-    border: 3px solid @dark-opac;
+    color: @dark-transparent;
+    border: 3px solid @dark-transparent;
   }
 
-  &--cancel:hover {
+  &--cancel:hover,
+  &--cancel:focus {
     background-color: transparent;
     opacity: 0.3;
     color: @dark;
     border: 3px solid @dark;
+    transition: @animation;
   }
 
   &--cancel:active {
@@ -159,24 +180,29 @@
 @media (min-width: 660px) {
   .upgrade__container {
     width: 620px;
-    padding: 57px 0 54px;
+    padding: 57px 0 32px;
   }
 
-  .upgrade__paragpaph {
+  .upgrade__paragraph {
     margin: 0 auto;
-    padding: 73px 0 69px;
+    padding: 65px 0 69px;
     font-size: 18px;
     text-align: center;
     background-color: @white;
   }
 
+  .upgrade__paragraph-block {
+    width: 425px;
+  }
+
   .upgrade__form {
     display: flex;
+    width: 610px;
+    justify-content: space-between;
   }
 
   .upgrade__instruments {
-    width: 260px;
-    margin: 0 auto;
+    width: 263px;
   }
 
   .upgrade__image {
@@ -190,7 +216,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 260px;
+    width: 253px;
+    margin-top: -17px;
   }
 
   .upgrade__range-wrapper {
@@ -200,8 +227,8 @@
   .upgrade__btn-custom-wrapper {
     flex-direction: column;
     align-items: center;
-    width: 50px;
-    height: 175px;
+    width: 22px;
+    height: 170px;
     margin: 0;
     padding: 0;
   }
@@ -215,6 +242,8 @@
   .upgrade__svg {
     width: 22px;
     height: 22px;
+    fill: @pink;
+    opacity: 1;
 
     &--fill {
       width: 24px;
@@ -226,10 +255,20 @@
     }
   }
 
+  .upgrade__btn-custom:hover .upgrade__svg,
+  .upgrade__btn-custom:focus .upgrade__svg {
+    opacity: 1;
+  }
+
+  .upgrade__btn-custom:active .upgrade__svg {
+    fill: @pink;
+    opacity: 1;
+  }
+
   .upgrade__range-block {
     position: relative;
     width: 202px;
-    min-height: 75px;
+    min-height: 73px;
     margin: 0 auto;
 
     &--cut {
@@ -241,10 +280,10 @@
     content: "";
     position: absolute;
     top: 73px;
-    left: -45px;
+    left: -55px;
     width: 275px;
-    height: 2px;
-    background-color: @dark-opac;
+    height: 1px;
+    background-color: @dark-transparent;
   }
 
   .upgrade__range {
@@ -254,8 +293,21 @@
     width: 202px;
   }
 
+  .upgrade__range-btn {
+    right: 39px;
+
+    &--contrast {
+      right: 90px;
+    }
+
+    &--fill {
+      left: 27px;
+    }
+  }
+
   .upgrade__btn-form-wrapper {
-    border: none;
+    padding: 66px 0 0;
+    border: 0;
   }
 
   .upgrade__btn {
@@ -265,12 +317,38 @@
 }
 
 @media (min-width: 960px) {
+  .upgrade {
+    margin-bottom: 97px;
+    background-color: @white;
+  }
+
+  .upgrade__paragraph {
+    padding: 24px 0 67px;
+  }
+
   .upgrade__container {
     width: 940px;
+    padding-bottom: 35px;
+    background-color: @grey;
+  }
+
+  .upgrade__form {
+    width: 781px;
+    margin: 0 auto;
+  }
+
+  .upgrade__instruments {
+    width: 410px;
+    margin-left: 90px;
+  }
+
+  .upgrade__custom-wrapper {
+    width: 410px;
   }
 
   .upgrade__btn-custom-wrapper {
     width: 44px;
+    min-height: 193px;
   }
 
   .upgrade__btn-custom {
@@ -294,10 +372,47 @@
     }
   }
 
+  .upgrade__range-wrapper {
+    width: 288px;
+  }
+
+  .upgrade__range-block {
+    width: 288px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 73px;
+      left: -120px;
+      width: 410px;
+      height: 1px;
+    }
+  }
+
+  .upgrade__range {
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    width: 288px;
+  }
+
+  .upgrade__range-btn {
+    right: 200px;
+
+    &--fill {
+      left: 250px;
+    }
+
+    &--contrast {
+      right: 113px;
+    }
+  }
+
   .upgrade__btn-form-wrapper {
     display: flex;
     justify-content: space-between;
     width: 410px;
+    padding: 143px 0 0;
   }
 
   .upgrade__btn {

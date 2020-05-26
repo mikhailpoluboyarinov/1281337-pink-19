@@ -1,11 +1,12 @@
 .reviews {
+  overflow: hidden;
   background-color: @white;
 }
 
 .reviews__container {
   display: flex;
   position: relative;
-  width: 320px;
+  width: 300%;
   overflow: hidden;
   margin: 0 auto;
   padding: 42px 0 20px;
@@ -14,7 +15,7 @@
 
 .reviews__item {
   position: relative;
-  width: 320px;
+  width: 100%;
   margin: 0 20px;
 }
 
@@ -40,7 +41,7 @@
 .reviews__toggles {
   position: absolute;
   top: 295px;
-  left: 50%;
+  left: 17%;
   margin-left: -42px;
 }
 
@@ -65,17 +66,19 @@
     height: 12px;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: @dark;
     opacity: 0.6;
+    transition: @animation;
   }
 
   &:active {
-    background-color: @dark-opac;
+    background-color: @dark-transparent;
   }
 }
 
-.reviews__prew {
+.reviews__previous {
   display: none;
 }
 
@@ -85,7 +88,6 @@
 
 @media (min-width: 660px) {
   .reviews__container {
-    width: 660px;
     padding: 42px 0 70px;
   }
 
@@ -94,7 +96,6 @@
     flex-wrap: wrap;
     align-items: center;
     flex-direction: column-reverse;
-    width: 620px;
   }
 
   .reviews__text {
@@ -116,6 +117,7 @@
 
   .reviews__toggles {
     top: 274px;
+    margin-left: -47px;
   }
 }
 
@@ -128,23 +130,22 @@
     background-image: url("./../img/icon-quotes.svg");
     background-repeat: no-repeat;
     left: 50%;
-    top: 72px;
+    top: 29px;
     margin-left: -39px;
   }
 
   .reviews__container {
     position: relative;
-    width: 960px;
+    padding-bottom: 30px;
   }
 
   .reviews__item {
-    width: 690px;
-    margin: 0 258px;
+    margin: 0 132px;
   }
 
   .reviews__text {
     width: 690px;
-    padding-top: 193px;
+    padding-top: 143px;
   }
 
   .reviews__author {
@@ -160,13 +161,13 @@
     display: none;
   }
 
-  .reviews__prew {
+  .reviews__previous {
     display: block;
     position: absolute;
     width: 22px;
     height: 41px;
-    left: 130px;
-    top: 50%;
+    left: 11px;
+    top: 53%;
     opacity: 0.3;
     background-color: transparent;
     background-image: url("./../img/icon-review-arrow-left.svg");
@@ -175,8 +176,10 @@
     border: none;
     cursor: pointer;
 
-    &:hover {
+    &:hover,
+    &:focus {
       opacity: 0.6;
+      transition: @animation;
     }
 
     &:active {
@@ -189,8 +192,8 @@
     position: absolute;
     width: 22px;
     height: 41px;
-    right: 130px;
-    top: 50%;
+    right: 67%;
+    top: 53%;
     opacity: 0.3;
     background-color: transparent;
     background-image: url("./../img/icon-review-arrow-right.svg");
@@ -199,8 +202,10 @@
     border: none;
     cursor: pointer;
 
-    &:hover {
+    &:hover,
+    &:focus {
       opacity: 0.6;
+      transition: @animation;
     }
 
     &:active {

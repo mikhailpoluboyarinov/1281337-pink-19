@@ -1,28 +1,44 @@
 .modal {
+  position: fixed;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 320px;
+  display: none;
+  z-index: 2;
   text-align: center;
   background-color: @white;
   box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
+}
 
-  &--error &__btn-wrapper {
-    background-color: @white;
-  }
+.modal--show {
+  display: block;
+}
+
+.modal__success {
+  top: 20%;
+}
+
+.modal__error .modal__btn-wrapper {
+  background-color: @white;
 }
 
 .modal__title {
-  padding: 45px 0 25px;
+  margin: 0;
+  padding: 42px 0 28px;
   font-size: 18px;
 }
 
 .modal__text {
   width: 275px;
   margin: 0 auto;
+  color: @dark;
   line-height: 24px;
 }
 
 .modal__btn {
   width: 276px;
-  margin: 50px 22px 44px;
+  margin: 47px 22px 51px;
   padding: 15px 0;
   font-size: 18px;
   font-weight: 700;
@@ -34,27 +50,39 @@
   border-radius: 4px;
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: @green-hover;
     border: 2px solid @green-hover;
+    transition: @animation;
   }
 
   &:active {
     color: @white-active;
   }
+
+  &--error {
+    margin: 38px 22px 44px;
+  }
 }
 
 .modal__btn-wrapper {
-  margin-top: 37px;
-  background-color: @dark-opac;
+  padding-bottom: 7px;
+  background-color: @dark-transparent;
+
+  &--success {
+    margin-top: 32px;
+    padding-bottom: 0;
+  }
 }
 
 @media (min-width: 660px) {
   .modal {
     width: 460px;
+    left: 50%;
 
     &__title {
-      padding: 45px 100px 0;
+      padding: 37px 100px 22px;
       font-size: 30px;
       line-height: 40px;
     }
@@ -64,6 +92,10 @@
       line-height: 24px;
       width: 310px;
     }
+  }
+
+  .modal__btn {
+    width: 300px;
   }
 }
 
@@ -76,7 +108,7 @@
     }
 
     &__title {
-      padding: 45px 100px 0;
+      padding: 41px 100px 22px;
       font-size: 30px;
       line-height: 40px;
     }
@@ -86,6 +118,24 @@
       line-height: 24px;
       width: 400px;
       margin: 0 auto;
+    }
+  }
+
+  .modal__btn-wrapper {
+    margin-top: 64px;
+
+    &--success {
+      margin-top: 38px;
+    }
+  }
+
+  .modal__btn {
+    width: 460px;
+
+    &--error {
+      width: 300px;
+      margin-top: 45px;
+      margin-bottom: 46px;
     }
   }
 }
