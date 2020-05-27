@@ -106,7 +106,7 @@ gulp.task("refresh", function (done) {
 gulp.task("minify", function () {
   return gulp.src("source/*.html")
     .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest('build'));
+    .pipe(gulp.dest("build"));
 });
 
 gulp.task("minify-js", function (done) {
